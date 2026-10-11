@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="kk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анель • Резюме-Портфолио | Жұмысқа орналасу анкетасы</title>
+  <meta name="description" content="Анель — 16 жаста. Жұмысқа орналасуға және тағылымдамаға арналған заманауи интерактивті резюме-портфолио мен жеке анкета.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Animated Glow Orbs -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <!-- Animated Flying Butterflies Container -->
+  <div class="butterflies-container" id="butterfliesContainer"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-avatar">A</span>
+        <span class="brand-name">Анель<span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> Мен туралы</a>
+        <a href="#positions" class="nav-link"><i class="fa-solid fa-briefcase"></i> Мақсатты бағыттар</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-sparkles"></i> Дағдылар</a>
+        <a href="#anketa" class="nav-link"><i class="fa-regular fa-file-lines"></i> Анкета (Резюме)</a>
+        <a href="#compliments" class="nav-link"><i class="fa-solid fa-heart"></i> Ең ерекше қыз</a>
+        <a href="#contact" class="nav-link"><i class="fa-regular fa-paper-plane"></i> Байланыс</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Тақырыпты ауыстыру" title="Күндізгі/Түнгі режим">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="shareLinkBtn" class="btn btn-outline btn-sm" title="Сілтемені көшіру / Бөлісу">
+          <i class="fa-solid fa-share-nodes"></i> <span>Сілтеме</span>
+        </button>
+        <button id="quickPrintBtn" class="btn btn-outline btn-sm">
+          <i class="fa-solid fa-print"></i> <span>Басып шығару / PDF</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Мәзірді ашу">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Жұмысқа / Тағылымдамаға дайынмын</span>
+          </div>
+
+          <h1 class="hero-title">
+            Сәлем, мен <span class="gradient-text">Анель</span>! <span class="title-butterfly">🦋</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            16 жастағы мақсатшыл, ұқыпты әрі жауапкершілігі жоғары ізденушімін. Жаңа ортаға тез бейімделемін, адамдармен тіл табысуға шебермін және командаға нақты пайда әкелуге әзірмін.
+          </p>
+
+          <div class="hero-badges">
+            <div class="badge-item">
+              <i class="fa-solid fa-cake-candles"></i>
+              <span>16 жаста</span>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span id="heroCityBadge">Қазақстан</span>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>Икемді кесте / Жартылай күн</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#anketa" class="btn btn-primary">
+              <i class="fa-solid fa-file-invoice"></i> Ресми анкетаны көру
+            </a>
+            <a href="https://wa.me/?text=%D0%A1%D3%99%D0%BB%D0%B5%D0%BC%D0%B5%D1%82%D1%81%D1%96%D0%B7%20%D0%B1%D0%B5%2C%20%D0%90%D0%BD%D0%B5%D0%BB%D1%8C!%20%D0%A1%D1%96%D0%B7%D0%B4%D1%96%D2%A3%20%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%D2%A3%D1%96%D0%B7%D0%B4%D1%96%20%D0%BA%D3%A9%D1%80%D1%96%D0%BF%20%D1%85%D0%B0%D0%B1%D0%B0%D1%80%D0%BB%D0%B0%D1%81%D1%8B%D0%BF%20%D1%82%D1%83%D1%80%D0%BC%D1%8B%D0%BD." target="_blank" class="btn btn-secondary" id="heroWhatsAppBtn">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp-қа жазу
+            </a>
+            <button class="btn btn-outline" id="heroCopyLinkBtn">
+              <i class="fa-solid fa-link"></i> Сілтемені көшіру
+            </button>
+          </div>
+
+          <div class="quick-stats">
+            <div class="stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-desc">Жауапкершілік & Ынта</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">3</span>
+              <span class="stat-desc">Тілді меңгеру</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">Fast</span>
+              <span class="stat-desc">Тез үйрену қабілеті</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-frame">
+              <img src="assets/anel_photo.jpg?v=2" alt="Анельдің фотосы" id="profileImage" class="avatar-img" onerror="this.src='assets/anel_photo.jpg'">
+              <div class="butterfly perched-butterfly" title="Көбелек 🦋">
+                <div class="butterfly-inner">
+                  <svg class="wing wing-left" viewBox="0 0 30 46">
+                    <defs>
+                      <linearGradient id="pbfGradL" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ff007f"/>
+                        <stop offset="55%" stop-color="#ff69b4"/>
+                        <stop offset="100%" stop-color="#ffe4e1"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M28,20 C28,8 20,1 10,2 C2,3 0,11 3,20 C6,27 20,25 28,20 Z" fill="url(#pbfGradL)" stroke="rgba(255,255,255,0.75)" stroke-width="0.8"/>
+                    <path d="M28,21 C18,24 6,26 4,32 C2,39 12,45 20,43 C26,41 28,31 28,21 Z" fill="url(#pbfGradL)" opacity="0.95" stroke="rgba(255,255,255,0.75)" stroke-width="0.8"/>
+                    <path d="M28,20 Q12,12 8,6 M28,20 Q10,18 5,16 M28,21 Q14,30 10,38" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="0.7"/>
+                  </svg>
+                  <div class="butterfly-body"></div>
+                  <svg class="wing wing-right" viewBox="0 0 30 46">
+                    <defs>
+                      <linearGradient id="pbfGradR" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ff007f"/>
+                        <stop offset="55%" stop-color="#ff69b4"/>
+                        <stop offset="100%" stop-color="#ffe4e1"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M2,20 C2,8 10,1 20,2 C28,3 30,11 27,20 C24,27 10,25 2,20 Z" fill="url(#pbfGradR)" stroke="rgba(255,255,255,0.75)" stroke-width="0.8"/>
+                    <path d="M2,21 C12,24 24,26 26,32 C28,39 18,45 10,43 C4,41 2,31 2,21 Z" fill="url(#pbfGradR)" opacity="0.95" stroke="rgba(255,255,255,0.75)" stroke-width="0.8"/>
+                    <path d="M2,20 Q18,12 22,6 M2,20 Q20,18 25,16 M2,21 Q16,30 20,38" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="0.7"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <div class="floating-card float-left">
+              <div class="float-icon green"><i class="fa-solid fa-circle-check"></i></div>
+              <div>
+                <strong>Ұқыпты & Адал</strong>
+                <span>Тапсырманы уақытында орындау</span>
+              </div>
+            </div>
+
+            <div class="floating-card float-right">
+              <div class="float-icon purple"><i class="fa-solid fa-bolt"></i></div>
+              <div>
+                <strong>Креативті көзқарас</strong>
+                <span>Заманауи трендтерді білу</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Таныстыру</span>
+          <h2 class="section-title">Мен туралы толығырақ</h2>
+          <p class="section-desc">Жұмысқа деген көзқарасым, жеке қасиеттерім және ұстанатын қағидаларым</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card highlight-card">
+            <div class="card-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <h3>Өмірлік ұстанымым</h3>
+            <p>
+              «Жасым 16-да болса да, мен үшін кез келген жұмыс — бұл үлкен тәжірибе, жауапкершілік және өсу мүмкіндігі. Мен тапсырылған іске тиянақты қарап, әрбір клиент пен ұжым мүшесіне сыйластықпен қараймын».
+            </p>
+            <div class="tag-cloud">
+              <span class="tag">#Мақсатшыл</span>
+              <span class="tag">#Әдептілік</span>
+              <span class="tag">#Энергия</span>
+              <span class="tag">#Жауапкершілік</span>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="card-icon blue"><i class="fa-solid fa-comments"></i></div>
+            <h3>Коммуникация және тіл табысу</h3>
+            <p>
+              Адамдармен ашық, күлімсіреп және сыпайы сөйлесуді ұнатамын. Кез келген түсініспеушілікті немесе стресстік жағдайды сабырлылықпен шешуге тырысамын.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="card-icon emerald"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Тез қабылдау & Даму</h3>
+            <p>
+              Жаңа бағдарламаларды, кассалық жүйелерді, стандарттарды және ережелерді өте жылдам меңгеремін. Сын мен кеңестерді дұрыс қабылдап, түзетулерді бірден ескеремін.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="card-icon orange"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Командалық рух</h3>
+            <p>
+              Ұжымда басқаларға көмектесуге әрқашан әзірмін. Жалпы ортақ нәтижеге жұмыс істеуді және берілген уәдені орындауды бірінші орынға қоямын.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Positions Section -->
+    <section class="section bg-alt" id="positions">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Бос орындар</span>
+          <h2 class="section-title">Қандай қызметтерге қызығамын?</h2>
+          <p class="section-desc">Оқумен қатар алып жүруге болатын қолайлы бағыттар</p>
+        </div>
+
+        <div class="positions-grid">
+          
+          <div class="position-card">
+            <div class="pos-badge">Креатив</div>
+            <div class="pos-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <h3>SMM / Мобилограф көмекшісі</h3>
+            <p class="pos-desc">Instagram, TikTok контент түсіру, қысқа роликтер (Reels) монтаждау, сторис дайындау, визуал құру.</p>
+            <ul class="pos-points">
+              <li><i class="fa-solid fa-check"></i> CapCut, InShot өңдеулері</li>
+              <li><i class="fa-solid fa-check"></i> Заманауи трендтерді бақылау</li>
+              <li><i class="fa-solid fa-check"></i> Жылдам сторис жүргізу</li>
+            </ul>
+          </div>
+
+          <div class="position-card featured">
+            <div class="pos-badge highlight">Сұраныс жоғары</div>
+            <div class="pos-icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <h3>Бариста / Кассир көмекшісі</h3>
+            <p class="pos-desc">Кофеханада немесе дәмханада қонақтарға жылы көңіл сыйлау, кассамен жұмыс істеу, тазалық пен тәртіпті ұстау.</p>
+            <ul class="pos-points">
+              <li><i class="fa-solid fa-check"></i> Қонақжайлық & сыпайылық</li>
+              <li><i class="fa-solid fa-check"></i> Ұқыптылық пен тазалық</li>
+              <li><i class="fa-solid fa-check"></i> Кассалық есепке мұқияттық</li>
+            </ul>
+          </div>
+
+          <div class="position-card">
+            <div class="pos-badge">Әкімшілік</div>
+            <div class="pos-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h3>Администратор / Ресепшн</h3>
+            <p class="pos-desc">Оқу орталықтарында, сұлулық салонында немесе студияларда клиенттерді қарсы алу, жазылуларды реттеу.</p>
+            <ul class="pos-points">
+              <li><i class="fa-solid fa-check"></i> Қоңырауларға жауап беру</li>
+              <li><i class="fa-solid fa-check"></i> Google Таблица / Excel жүргізу</li>
+              <li><i class="fa-solid fa-check"></i> Келушілерге бағыт-бағдар беру</li>
+            </ul>
+          </div>
+
+          <div class="position-card">
+            <div class="pos-badge">Сату & Қызмет</div>
+            <div class="pos-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+            <h3>Сатушы-кеңесші / Промоутер</h3>
+            <p class="pos-desc">Дүкендегі тауарларды дұрыс сөреге орналастыру, сатып алушыларға көмек көрсету, брендті таныстыру.</p>
+            <ul class="pos-points">
+              <li><i class="fa-solid fa-check"></i> Ашық әңгімелесу шеберлігі</li>
+              <li><i class="fa-solid fa-check"></i> Энергия және белсенділік</li>
+              <li><i class="fa-solid fa-check"></i> Тауарды таныстыра білу</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Қабілеттер</span>
+          <h2 class="section-title">Менің дағдыларым мен білімім</h2>
+          <p class="section-desc">Тәжірибеде қолдана алатын құралдарым мен жеке қасиеттерім</p>
+        </div>
+
+        <div class="skills-wrapper">
+          
+          <!-- Soft Skills -->
+          <div class="skill-group-card">
+            <div class="skill-group-title">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <h3>Жеке қасиеттер (Soft Skills)</h3>
+            </div>
+            
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Жауапкершілік & Сақтық</span>
+                <span>100%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Пунктуалдылық (Уақытты бағалау)</span>
+                <span>100%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Адамдармен тіл табысу (Клиентоориентированность)</span>
+                <span>95%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Жаңа нәрсені жылдам меңгеру</span>
+                <span>98%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 98%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Энергия және белсенділік</span>
+                <span>96%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 96%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Hard Skills & Languages -->
+          <div class="skill-group-card">
+            <div class="skill-group-title">
+              <i class="fa-solid fa-laptop-code"></i>
+              <h3>Құралдар & Тілдер (Hard Skills)</h3>
+            </div>
+
+            <div class="tools-grid">
+              <div class="tool-chip">
+                <i class="fa-brands fa-instagram"></i>
+                <div>
+                  <strong>Instagram / TikTok</strong>
+                  <span>Контент, Trends, Reels</span>
+                </div>
+              </div>
+
+              <div class="tool-chip">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <div>
+                  <strong>CapCut / InShot</strong>
+                  <span>Видеомонтаж</span>
+                </div>
+              </div>
+
+              <div class="tool-chip">
+                <i class="fa-solid fa-palette"></i>
+                <div>
+                  <strong>Canva</strong>
+                  <span>Постер, визуал безендіру</span>
+                </div>
+              </div>
+
+              <div class="tool-chip">
+                <i class="fa-solid fa-file-word"></i>
+                <div>
+                  <strong>MS Office & Google</strong>
+                  <span>Docs, Sheets, Slides</span>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="sub-skills-title"><i class="fa-solid fa-language"></i> Тілдерді меңгеру деңгейі</h4>
+            <div class="languages-list">
+              <div class="lang-card">
+                <span class="lang-flag">🇰🇿</span>
+                <div class="lang-info">
+                  <strong>Қазақ тілі</strong>
+                  <span>Ана тілі (Еркін)</span>
+                </div>
+              </div>
+
+              <div class="lang-card">
+                <span class="lang-flag">🇷🇺</span>
+                <div class="lang-info">
+                  <strong>Орыс тілі</strong>
+                  <span>Еркін сөйлесу және жазу</span>
+                </div>
+              </div>
+
+              <div class="lang-card">
+                <span class="lang-flag">🇬🇧</span>
+                <div class="lang-info">
+                  <strong>Ағылшын тілі</strong>
+                  <span>Базалық деңгей (A2/B1)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Resume Questionnaire (АНКЕТА) Section -->
+    <section class="section bg-alt" id="anketa">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Ресми құжат</span>
+          <h2 class="section-title">Жұмысқа орналасу анкетасы</h2>
+          <p class="section-desc">Жұмыс берушіге қажетті барлық мәліметтер қамтылған толық түйіндеме</p>
+        </div>
+
+        <!-- Resume Printable Document Container -->
+        <div class="resume-document" id="printableResume">
+          
+          <!-- Document Header -->
+          <div class="doc-header">
+            <div class="doc-avatar-side">
+              <img src="assets/anel_photo.jpg?v=2" alt="Анель" class="doc-avatar-img" onerror="this.src='assets/anel_photo.jpg'">
+            </div>
+            <div class="doc-header-info">
+              <div class="doc-badge">АНКЕТА-ТҮЙІНДЕМЕ (РЕЗЮМЕ)</div>
+              <h2 class="doc-name" id="docName">Анель</h2>
+              <p class="doc-role" id="docRole">Жұмыс іздеуші (Бариста / SMM-көмекші / Администратор / Сатушы-кеңесші)</p>
+              
+              <div class="doc-meta-grid">
+                <div class="meta-item">
+                  <span class="meta-lbl">Жасы:</span>
+                  <span class="meta-val" id="docAge">16 жаста</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-lbl">Жұмыс формасы:</span>
+                  <span class="meta-val" id="docSchedule">Жартылай күн (Part-time), икемді кесте</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-lbl">Орналасқан жері:</span>
+                  <span class="meta-val" id="docCity">Қазақстан</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-lbl">Байланыс телефоны:</span>
+                  <span class="meta-val" id="docPhone">+7 (7XX) XXX-XX-XX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="doc-divider">
+
+          <!-- Questionnaire Grid -->
+          <div class="doc-body-grid">
+            
+            <!-- Left Column -->
+            <div class="doc-col">
+              
+              <div class="doc-section">
+                <h4 class="doc-sec-title"><i class="fa-solid fa-bullseye"></i> Жұмыс мақсаты</h4>
+                <p class="doc-text" id="docGoal">
+                  Адал әрі тиянақты еңбек етіп, ұжымға пайда тигізу және қызмет көрсету/SMM/әкімшілік саласында кәсіби тәжірибе жинақтау.
+                </p>
+              </div>
+
+              <div class="doc-section">
+                <h4 class="doc-sec-title"><i class="fa-solid fa-graduation-cap"></i> Білімі</h4>
+                <div class="doc-timeline-item">
+                  <strong>Орта білім беру мекемесі</strong>
+                  <span class="timeline-date">2016 — Қазіргі уақыт</span>
+                  <p class="timeline-desc">Сабақ үлгерімі жақсы, қоғамдық және мәдени іс-шараларға белсенді қатысушы.</p>
+                </div>
+              </div>
+
+              <div class="doc-section">
+                <h4 class="doc-sec-title"><i class="fa-solid fa-hand-holding-heart"></i> Тәжірибе & Белсенділік</h4>
+                <div class="doc-timeline-item">
+                  <strong>Мектеп / Колледж іс-шаралары</strong>
+                  <span class="timeline-date">2022 — 2024</span>
+                  <p class="timeline-desc">Мерекелік кештерді ұйымдастыру, фото/видео контент дайындау, қонақтарды тіркеу.</p>
+                </div>
+                <div class="doc-timeline-item">
+                  <strong>Волонтерлік және қоғамдық көмек</strong>
+                  <span class="timeline-date">2023 — 2024</span>
+                  <p class="timeline-desc">Қайырымдылық және жастар акцияларында адамдармен тікелей байланыс жасау.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="doc-col">
+              
+              <div class="doc-section">
+                <h4 class="doc-sec-title"><i class="fa-solid fa-star"></i> Негізгі артықшылықтар</h4>
+                <ul class="doc-list" id="docProsList">
+                  <li><strong>Жауапкершілік:</strong> Берілген тапсырманы уақытында және сапалы орындаймын.</li>
+                  <li><strong>Сыпайылық:</strong> Адамдармен сөйлесу мәдениетін жақсы білемін, жағымды көңіл-күй сыйлаймын.</li>
+                  <li><strong>Зиянды әдеттер жоқ:</strong> Салауатты өмір салтын ұстанамын.</li>
+                  <li><strong>Тез үйрену:</strong> Кассалық аппарат, планшет, арнайы бағдарламаларды бірнеше күнде толық меңгеремін.</li>
+                </ul>
+              </div>
+
+              <div class="doc-section">
+                <h4 class="doc-sec-title"><i class="fa-solid fa-clock-rotate-left"></i> Жұмыс уақыты мүмкіндігі</h4>
+                <div class="time-chips">
+                  <span class="t-chip"><i class="fa-solid fa-check"></i> Түстен кейінгі уақыт</span>
+                  <span class="t-chip"><i class="fa-solid fa-check"></i> Сенбі / Жексенбі</span>
+                  <span class="t-chip"><i class="fa-solid fa-check"></i> Каникул күндері (Толық күн)</span>
+                </div>
+              </div>
+
+              <div class="doc-section">
+                <h4 class="doc-sec-title"><i class="fa-solid fa-address-book"></i> Қосымша байланыс</h4>
+                <p class="doc-text">
+                  WhatsApp, Telegram желілерінде 24/7 белсендімін. Әңгімелесуге (собеседование) кез келген уақытта шақыруға болады.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Document Footer -->
+          <div class="doc-footer">
+            <span class="doc-sign">Анкета шындыққа сәйкес толтырылды ✓</span>
+            <span class="doc-stamp">Қазақстан, 2026</span>
+          </div>
+
+        </div>
+
+        <!-- Resume Action Buttons Bar -->
+        <div class="resume-toolbar">
+          <button class="btn btn-primary" id="printResumeBtn">
+            <i class="fa-solid fa-print"></i> Резюмені басып шығару / PDF түрінде сақтау
+          </button>
+          <button class="btn btn-secondary" id="editDataBtn">
+            <i class="fa-solid fa-pen-to-square"></i> Мәліметтерді өңдеу (Қала, телефон қосу)
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Compliments & Special Words Section -->
+    <section class="section compliments-section" id="compliments">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag special-tag"><i class="fa-solid fa-sparkles"></i> Ерекше көңіл-күй</span>
+          <h2 class="section-title">Ең сұлу, ең ерекше аруға арналған лебіздер <span class="heart-pulse">💖</span></h2>
+          <p class="section-desc">Әлемдегі ең көркем, нәзік әрі қайталанбас қыз — Анельге арналған шын жүректен шыққан сөздер</p>
+        </div>
+
+        <!-- Interactive Compliment Showcase -->
+        <div class="compliment-interactive-card">
+          <div class="card-glow-pink"></div>
+          
+          <div class="compliment-top-bar">
+            <span class="c-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Жүректен шыққан сөздер</span>
+            <div class="c-love-stats">
+              <i class="fa-solid fa-heart heart-beat-icon"></i>
+              <span><strong id="heartsCounter">128</strong> жүрекше сыйланды</span>
+            </div>
+          </div>
+
+          <div class="compliment-quote-wrap">
+            <i class="fa-solid fa-quote-left c-quote-mark c-quote-left"></i>
+            <p class="compliment-quote-text" id="complimentQuoteText">
+              «Анель — айналасына нұр шашатын, көздерінен мейірім төгілген ерекше ару. Оның күлкісі көктемнің шуағындай жылы, ал жаны таңғы шықтай мөлдір!»
+            </p>
+            <i class="fa-solid fa-quote-right c-quote-mark c-quote-right"></i>
+          </div>
+
+          <div class="compliment-action-btns">
+            <button class="btn btn-primary btn-sparkle" id="nextComplimentBtn">
+              <i class="fa-solid fa-sparkles"></i> Жаңа комплимент оқу
+            </button>
+            <button class="btn btn-secondary btn-heart" id="sendHeartBtn">
+              <i class="fa-solid fa-heart"></i> Жүрекше сыйлау 💖
+            </button>
+          </div>
+        </div>
+
+        <!-- Four Aesthetic Compliment Pillars -->
+        <div class="compliments-grid">
+          
+          <div class="compliment-card">
+            <div class="c-card-badge">✨ Даралық</div>
+            <div class="c-card-icon star"><i class="fa-solid fa-star"></i></div>
+            <h3>Қайталанбас дара сұлулық</h3>
+            <p>Сен жай ғана әдемі емессің, сенің әрбір қимылыңнан терең парасат, ерекше сыпайылық пен биязылық аңғарылады. Сендей ғажайып жан өмірде өте сирек кездеседі.</p>
+          </div>
+
+          <div class="compliment-card featured-glow">
+            <div class="c-card-badge rose">🌸 Балғындық</div>
+            <div class="c-card-icon rose"><i class="fa-solid fa-spa"></i></div>
+            <h3>Көктемдей жайнаған көркемдік</h3>
+            <p>Сенің жаныңда уақыттың қалай өткені білінбейді. Күлген кездегі шынайы көңілің мен көздеріңдегі мейірім кез келген адамның жүрегіне көктемнің шуағын орнатады.</p>
+          </div>
+
+          <div class="compliment-card">
+            <div class="c-card-badge violet">💎 Асыл қасиет</div>
+            <div class="c-card-icon violet"><i class="fa-solid fa-gem"></i></div>
+            <h3>Алтын мінез & Пәк ниет</h3>
+            <p>Қарапайымдылығың мен табиғилығың — ең үлкен асылың, ал ішкі жан дүниеңнің сұлулығы — теңдессіз қазына. Әрбір сөзіңнен адалдық пен жылылық сезіледі.</p>
+          </div>
+
+          <div class="compliment-card">
+            <div class="c-card-badge amber">☀️ Нұрлы шапағат</div>
+            <div class="c-card-icon amber"><i class="fa-solid fa-sun"></i></div>
+            <h3>Әлемді жарық етер күлкі</h3>
+            <p>Сенің күлкің — бұл әлемді әлдеқайда көркем, мейірімді әрі жарқын ететін сиқырлы күш. Әрқашан биіктерден көрініп, тек қуаныш пен бақытқа бөлене бер!</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact & Hire Me Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Байланысу</span>
+          <h2 class="section-title">Жұмысқа шақыру немесе сұрақ қою</h2>
+          <p class="section-desc">Төмендегі батырмалар арқылы маған тікелей хабарласа аласыз</p>
+        </div>
+
+        <div class="contact-wrapper">
+          
+          <div class="contact-info-card">
+            <h3>Менімен байланыс</h3>
+            <p>Егер сізде бос жұмыс орны, тағылымдама немесе жобалық жұмыс болса, қуана талқылауға дайынмын!</p>
+            
+            <div class="contact-methods">
+              <a href="https://wa.me/?text=%D0%A1%D3%99%D0%BB%D0%B5%D0%BC%D0%B5%D1%82%D1%81%D1%96%D0%B7%20%D0%B1%D0%B5%2C%20%D0%90%D0%BD%D0%B5%D0%BB%D1%8C!%20%D0%96%D2%B9%D0%BC%D1%8B%D1%81%D2%9B%D0%B0%20%D2%9B%D0%B0%D1%82%D1%8B%D1%81%D1%82%D1%8B%20%D2%B1%D1%81%D1%8B%D0%BD%D1%8B%D1%81%20%D0%B1%D0%BE%D0%B9%D1%8B%D0%BD%D1%88%D0%B0%20%D1%85%D0%B0%D0%B1%D0%B0%D1%80%D0%BB%D0%B0%D1%81%D1%8B%D0%BF%20%D1%82%D2%B1%D1%80%D0%BC%D1%8B%D0%BD." target="_blank" class="c-method-item wa" id="cWaLink">
+                <div class="c-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span id="cWaText">Тікелей хабарлама жазу</span>
+                </div>
+              </a>
+
+              <a href="https://t.me/" target="_blank" class="c-method-item tg" id="cTgLink">
+                <div class="c-icon"><i class="fa-brands fa-telegram"></i></div>
+                <div>
+                  <strong>Telegram</strong>
+                  <span>@anel_profile</span>
+                </div>
+              </a>
+
+              <div class="c-method-item phone" id="cPhoneCard">
+                <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <strong>Телефон</strong>
+                  <span id="cPhoneText">+7 (7XX) XXX-XX-XX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="schedule-note">
+              <i class="fa-solid fa-bell"></i>
+              <span>Қоңырауларға сабақтан кейінгі уақытта немесе WhatsApp арқылы кез келген уақытта жауап беремін.</span>
+            </div>
+          </div>
+
+          <!-- Quick Offer Form -->
+          <div class="contact-form-card">
+            <h3>Жұмыс ұсынысын жіберу</h3>
+            <p>Мәліметтерді толтырсаңыз, WhatsApp арқылы дайын хат ашылады:</p>
+            
+            <form id="offerForm">
+              <div class="form-group">
+                <label for="companyName">Компания / Ұйым аты:</label>
+                <input type="text" id="companyName" placeholder="Мысалы: 'Coffee House' немесе ЖШС" required>
+              </div>
+
+              <div class="form-group">
+                <label for="vacancySelect">Ұсынылатын бағыт:</label>
+                <select id="vacancySelect">
+                  <option value="Бариста / Кассир көмекшісі">Бариста / Кассир көмекшісі</option>
+                  <option value="SMM / Видео түсіруші">SMM / Мобилограф көмекшісі</option>
+                  <option value="Администратор / Көмекші">Администратор / Көмекші</option>
+                  <option value="Сатушы-кеңесші">Сатушы-кеңесші</option>
+                  <option value="Басқа жұмыс">Басқа ұсыныс</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="workCity">Қала / Мекенжай:</label>
+                <input type="text" id="workCity" placeholder="Мысалы: Алматы қ. / Астана қ.">
+              </div>
+
+              <div class="form-group">
+                <label for="offerMessage">Қосымша мәлімет немесе сұрақ:</label>
+                <textarea id="offerMessage" rows="3" placeholder="Сұхбаттасу уақыты, кестесі немесе жалақы шарттары..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa-brands fa-whatsapp"></i> Ұсынысты WhatsApp-қа жіберу
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Edit Data Modal -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-pen-nib"></i> Анкета мәліметтерін түзету</h3>
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-hint">Мұнда өз қалаңызды, телефон нөміріңізді және жеке мәтініңізді енгізе аласыз. Ол сайтта және басып шығарылатын анкетада бірден жаңарады.</p>
+        
+        <div class="form-group">
+          <label for="inputName">Аты-жөні:</label>
+          <input type="text" id="inputName" value="Анель">
+        </div>
+
+        <div class="form-group">
+          <label for="inputAge">Жасы:</label>
+          <input type="text" id="inputAge" value="16 жаста">
+        </div>
+
+        <div class="form-group">
+          <label for="inputCity">Тұратын қаласы:</label>
+          <input type="text" id="inputCity" value="Алматы">
+        </div>
+
+        <div class="form-group">
+          <label for="inputPhone">Байланыс телефоны (WhatsApp):</label>
+          <input type="text" id="inputPhone" value="+7 777 123 45 67">
+        </div>
+
+        <div class="form-group">
+          <label for="inputTelegram">Telegram username (мысалы @anel):</label>
+          <input type="text" id="inputTelegram" value="@anel_k">
+        </div>
+
+        <div class="form-group">
+          <label for="inputSchedule">Қолайлы жұмыс кестесі:</label>
+          <input type="text" id="inputSchedule" value="Жартылай күн (14:00-ден кейін), демалыс күндері">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="cancelModalBtn">Болдырмау</button>
+        <button class="btn btn-primary" id="saveModalBtn">Сақтау</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Мәліметтер сәтті сақталды!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <strong>Анель</strong> — Жұмысқа орналасу анкетасы және портфолио
+      </div>
+      <div class="footer-right">
+        <span>© 2026. Барлық құқықтар қорғалған.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Moldanazar "Махаббатым" Music Player -->
+  <aside class="music-player-widget" id="musicPlayerWidget" aria-label="Музыка ойнатқышы">
+    <div class="music-compact-wrap">
+      <div class="music-vinyl-box" id="musicVinylBox" title="Ойнату / Кідірту">
+        <div class="music-vinyl" id="musicVinyl">
+          <div class="vinyl-rings"></div>
+          <div class="vinyl-center">
+            <span class="vinyl-note">🎵</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="music-meta">
+        <div class="music-title">
+          <span>Moldanazar — Махаббатым</span>
+          <span class="music-live-badge">Қазақ инди</span>
+        </div>
+        <div class="music-status-line">
+          <span class="music-status-text" id="musicStatusText">Әуенді тыңдау үшін басыңыз</span>
+          <div class="music-equalizer" id="musicEqualizer">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+            <span class="bar bar-4"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-controls">
+        <button class="m-ctrl-btn m-play-btn" id="musicPlayBtn" aria-label="Ойнату немесе тоқтату" title="Ойнату / Тоқтату">
+          <i class="fa-solid fa-play" id="musicPlayIcon"></i>
+        </button>
+        <button class="m-ctrl-btn m-vol-btn" id="musicMuteBtn" aria-label="Дыбысты реттеу" title="Дыбыс">
+          <i class="fa-solid fa-volume-high" id="musicVolIcon"></i>
+        </button>
+        <button class="m-ctrl-btn m-collapse-btn" id="musicCollapseBtn" aria-label="Кішірейту / Үлкейту" title="Тасалау">
+          <i class="fa-solid fa-chevron-down" id="musicCollapseIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Audio element with reliable sources -->
+    <audio id="bgMusic" preload="auto" loop>
+      <source src="assets/moldanazar_mahabbatym.webm" type="audio/webm">
+      <source src="assets/moldanazar_mahabbatym.mp3" type="audio/mpeg">
+    </audio>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
