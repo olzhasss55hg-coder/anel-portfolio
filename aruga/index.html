@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Аруға арналған сұрақ 💌</title>
+  <!-- Google Fonts for premium soft rounded typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Comfortaa:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
+</head>
+<body>
+  <!-- Ambient floating hearts canvas for background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Celebration fireworks canvas -->
+  <canvas id="fireworks-canvas"></canvas>
+
+  <!-- Audio toggle floating button -->
+  <button id="sound-toggle" class="sound-btn" title="Дыбысты қосу/өшіру" aria-label="Дыбысты басқару">
+    <span id="sound-icon">🔊</span>
+  </button>
+
+  <main class="page-container">
+    <!-- Center interactive card -->
+    <div class="love-card" id="main-card">
+      <div class="card-glass-shine"></div>
+
+      <!-- State 1: Question -->
+      <div class="card-content" id="question-state">
+        <div class="card-header">
+          <span class="heart-badge">💌</span>
+          <h1 class="card-title">Аруға арналған сұрақ</h1>
+          <span class="heart-badge">💌</span>
+        </div>
+
+        <p class="card-question">
+          Сабақтан кейін үйіңізге дейін шығарып салсам, қарсы емессіз бе? 💕
+        </p>
+
+        <div class="actions-wrapper" id="buttons-area">
+          <button id="yes-btn" class="btn btn-yes">
+            <span class="btn-text">Қарсы емеспін</span>
+            <span class="btn-sparkle">✨</span>
+          </button>
+
+          <button id="no-btn" class="btn btn-no">
+            <span class="btn-text" id="no-text">Қарсымын</span>
+            <span class="btn-icon">🙈</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- State 2: Accepted / Success -->
+      <div class="card-content hidden" id="success-state">
+        <div class="celebration-badge">
+          <span class="big-heart">💖</span>
+        </div>
+        
+        <h2 class="success-title">Сізді күтемін! 🥰❤️</h2>
+        
+        <p class="success-subtitle">
+          Келіскеніңізге өте қуаныштымын! Сабақ аяқталған соң міндетті түрде күтіп аламын ✨
+        </p>
+
+        <div class="success-details">
+          <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <span>Кездесу орны: Сабақтан шыға беріс</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">🕒</span>
+            <span>Уақыты: Қоңырау соғылған сәтте</span>
+          </div>
+        </div>
+
+        <div class="success-actions">
+          <button id="replay-btn" class="btn-secondary">
+            <span>🔄 Қайта ойнау</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cute couple cats illustration at the bottom (Peach & Goma style) -->
+    <div class="couple-cats-container" id="cats-container">
+      <div class="floating-love-bubble" id="love-bubble">
+        <span class="floating-heart">❤️</span>
+      </div>
+      <div class="cats-svg-wrapper">
+        <svg viewBox="0 0 200 120" class="cats-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="peachGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="100%" stop-color="#fcedeb" />
+            </linearGradient>
+            <linearGradient id="gomaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#cbd5e1" />
+              <stop offset="100%" stop-color="#94a3b8" />
+            </linearGradient>
+            <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+              <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#f43f5e" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Shadow underneath -->
+          <ellipse cx="100" cy="112" rx="75" ry="7" fill="rgba(244, 63, 94, 0.15)" />
+
+          <!-- Left Cat (Goma - Grey cute cat) -->
+          <g id="goma-cat" class="cat goma">
+            <!-- Tail -->
+            <path d="M 40 95 C 25 90, 20 70, 30 65 C 33 63, 35 68, 32 75 C 30 83, 38 88, 45 90" fill="#94a3b8" />
+            <!-- Ears -->
+            <polygon points="50,48 42,28 62,38" fill="#94a3b8" />
+            <polygon points="49,46 45,34 58,41" fill="#fca5a5" />
+            <polygon points="76,46 88,26 94,44" fill="#94a3b8" />
+            <polygon points="78,45 86,32 91,44" fill="#fca5a5" />
+            <!-- Body & Head -->
+            <ellipse cx="68" cy="78" rx="28" ry="24" fill="url(#gomaGrad)" />
+            <ellipse cx="68" cy="56" rx="24" ry="20" fill="url(#gomaGrad)" />
+            <!-- Cheeks -->
+            <ellipse cx="54" cy="62" rx="4" ry="2.5" fill="#f87171" opacity="0.6" />
+            <ellipse cx="80" cy="62" rx="4" ry="2.5" fill="#f87171" opacity="0.6" />
+            <!-- Eyes (closed happy happy crescent) -->
+            <path d="M 57 54 Q 61 50 65 54" stroke="#334155" stroke-width="2.2" stroke-linecap="round" fill="none" class="cat-eye" />
+            <path d="M 72 54 Q 76 50 80 54" stroke="#334155" stroke-width="2.2" stroke-linecap="round" fill="none" class="cat-eye" />
+            <!-- Cute mouth -->
+            <path d="M 66 61 Q 69 63 71 61" stroke="#334155" stroke-width="1.8" stroke-linecap="round" fill="none" />
+            <!-- Tiny nose -->
+            <circle cx="68.5" cy="59" r="1.5" fill="#e11d48" />
+            <!-- Paws -->
+            <ellipse cx="65" cy="94" rx="7" ry="5" fill="#cbd5e1" />
+            <ellipse cx="78" cy="94" rx="7" ry="5" fill="#cbd5e1" />
+          </g>
+
+          <!-- Right Cat (Peach - White cute cat with gentle pink vibe) -->
+          <g id="peach-cat" class="cat peach">
+            <!-- Tail -->
+            <path d="M 160 95 C 175 90, 180 70, 170 65 C 167 63, 165 68, 168 75 C 170 83, 162 88, 155 90" fill="#f1f5f9" />
+            <!-- Ears -->
+            <polygon points="124,46 112,26 118,44" fill="#ffffff" />
+            <polygon points="122,45 114,32 119,44" fill="#fca5a5" />
+            <polygon points="150,48 158,28 138,38" fill="#ffffff" />
+            <polygon points="151,46 155,34 142,41" fill="#fca5a5" />
+            <!-- Body & Head -->
+            <ellipse cx="132" cy="78" rx="28" ry="24" fill="url(#peachGrad)" />
+            <ellipse cx="132" cy="56" rx="24" ry="20" fill="url(#peachGrad)" />
+            <!-- Cheeks -->
+            <ellipse cx="120" cy="62" rx="4" ry="2.5" fill="#fb7185" opacity="0.7" />
+            <ellipse cx="146" cy="62" rx="4" ry="2.5" fill="#fb7185" opacity="0.7" />
+            <!-- Eyes (smiling soft arches) -->
+            <path d="M 120 54 Q 124 50 128 54" stroke="#475569" stroke-width="2.2" stroke-linecap="round" fill="none" class="cat-eye" />
+            <path d="M 135 54 Q 139 50 143 54" stroke="#475569" stroke-width="2.2" stroke-linecap="round" fill="none" class="cat-eye" />
+            <!-- Cute mouth -->
+            <path d="M 129 61 Q 132 63 134 61" stroke="#475569" stroke-width="1.8" stroke-linecap="round" fill="none" />
+            <!-- Tiny nose -->
+            <circle cx="131.5" cy="59" r="1.5" fill="#fb7185" />
+            <!-- Paws -->
+            <ellipse cx="122" cy="94" rx="7" ry="5" fill="#ffffff" />
+            <ellipse cx="135" cy="94" rx="7" ry="5" fill="#ffffff" />
+          </g>
+
+          <!-- Floating middle love hearts -->
+          <g id="sparkle-hearts" class="sparkle-hearts">
+            <path d="M 100 32 C 95 24, 85 27, 85 36 C 85 45, 100 55, 100 55 C 100 55, 115 45, 115 36 C 115 27, 105 24, 100 32 Z" fill="#ff4d79" />
+            <circle cx="106" cy="30" r="1.5" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      <p class="cats-caption">Әрқашан бірге 💕</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
